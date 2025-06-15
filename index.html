@@ -7,14 +7,40 @@
     <title>Luminora</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       * {
+        
         scrollbar-width: none;
+        scroll-behavior: smooth;
       }
       *::-webkit-scrollbar {
         display: none;
+      }
+      @keyframes moonCloudDrift {
+        0% {
+          transform: translateX(0px) translateY(0px) scale(1);
+        }
+        25% {
+          transform: translateX(-6px) translateY(2px) scale(1.01);
+        }
+        50% {
+          transform: translateX(10px) translateY(-2px) scale(1.02);
+        }
+        75% {
+          transform: translateX(-6px) translateY(1px) scale(1.01);
+        }
+        100% {
+          transform: translateX(0px) translateY(0px) scale(1);
+        }
+      }
+
+      .animate-cloud {
+        animation: moonCloudDrift 10s ease-in-out infinite;
       }
     </style>
     <script src="./src/constant/index.js"></script>
@@ -22,5 +48,7 @@
   <body>
     <div id="nav"></div>
     <div id="hero"></div>
+    <div id="article"></div>
+    <div id="view"></div>
   </body>
 </html>
